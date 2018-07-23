@@ -2,10 +2,10 @@ from flask import Flask, render_template, request, redirect, url_for, session
 import dataset, random, os
 
 app = Flask(__name__)
-app.secret_key = urandom(24)
+app.secret_key = os.urandom(24)
 
 # TODO: set up database
-# db = dataset.connect(“<database>”)
+# db = dataset.connect("<database>")
 
 
 @app.route('/')
